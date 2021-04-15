@@ -12,20 +12,27 @@
 
       <h3 class="title is-3"><%= dream.text %></h3>
 
-      <form action="/dreams/<%= dream._id %>?_method=PUT" method="post" class="m-3">
+      <!-- <form action="/dreams/<%= dream._id %>?_method=PUT" method="post" class="m-3">
         <input
           class="input"
           type="text"
           name="text"
           placeholder="new dream"
           value="<%= dream.text %>"
-        />
-        <input class="button" type="submit" value="Update Dream" />
-      </form>
-
-      <form action="/dreams/<%= dream._id %>?_method=delete" method="post" class="m-3">
-        <input class="button" type="submit" value="Delete Dream" />
-      </form>
+        /> -->
+        <form action="/dreams/<%= dream._id %>?_method=PUT" method="post" class="m-3">
+          <input 
+          class="input" 
+          type="text" 
+          placeholder="New Dream" 
+          aria-label="default input example"
+          value="<%= dream.text %>"
+          name="text">
+          <button type="submit" class="btn btn-primary" value="Update Dream">Update Dream</button>
+        </form>
+        <form action="/dreams/<%= dream._id %>?_method=delete" method="post" class="m-3">
+          <button type="submit" value="Delete Dream" class="btn btn-danger">Delete Dream</button>
+        </form>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>

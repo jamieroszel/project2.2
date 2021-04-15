@@ -7,22 +7,26 @@
     <!-- THE HEADER TAG PARTIAL -->
     <%- include("../partials/header") %>
     <main>
-      <h2 class="subtitle is-2">Dreams</h2>
-      <a href="/dashboard">DASHBOARD</a>
+      <h2 class="subtitle is-2 text-center m-3">Dreams</h2>
+      
+      
       <% for (dream of dreams) { %>
-
         <a href="/dreams/<%= dream._id %>"><h3><%= dream.text %></h3></a>
-
       <% } %>
-      <form action="/dreams/" method="post">
-        <input
-          class="input"
-          type="text"
-          name="text"
-          placeholder="new dream"
-        />
-        <input class="button" type="submit" value="create dream" />
+      <div class="card m-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <form action="/dreams/" method="post" class="ml-3">
+          <input class="form-control form-control-lg" type="text" name="text" placeholder="New Podcast" aria-label=".form-control-lg example">
+          <input class="button mt-1" type="submit" value="Create" />
       </form>
+      <a href="/dashboard"><button type="button" class="btn btn-secondary m-3 bg-info">Back to the Dashboard</button></a>
     </main>
     <!-- THE HEAD TAG PARTIAL -->
     <%- include("../partials/footer") %>
