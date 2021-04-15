@@ -19,7 +19,7 @@ const seed = async () => {
   mongoose.connection.db.dropDatabase();
 
   const newuser = {
-    username: "alexmerced",
+    username: "jamieroszel",
     password: await bcrypt.hash("cheese", await bcrypt.genSalt(10))
   }
 
